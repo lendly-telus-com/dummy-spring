@@ -12,9 +12,9 @@ import lombok.Data;
 @Data
 @Entity
 @Table
-public class DemoModel {
+public class Artist {
 
-	public DemoModel() {
+	public Artist() {
 
 	}
 

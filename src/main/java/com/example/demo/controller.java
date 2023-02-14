@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,9 +21,14 @@ public class controller {
 	}
 
 	@PostMapping("/artists")
-	public Optional<DemoModel> saveModel(@RequestBody DemoModel demoModel) {
+	public Optional<Artist> saveModel(@RequestBody Artist demoModel) {
 		return this.demoService.saveModel(demoModel);
 
+	}
+
+	@GetMapping("/artists")
+	public List<Artist> GetModel() {
+		return this.demoService.findAll();
 	}
 
 }
